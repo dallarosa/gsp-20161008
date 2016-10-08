@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 router.get('/webhook',function(req,res) {
   if(req.query['hub.verify_token'] === "my_whatever_verification_token") {
-    res.send(res.query['hub.challenge']);
+    res.send(req.query['hub.challenge']);
   } else {
     res.send('Error, wrong validation token');
   }
