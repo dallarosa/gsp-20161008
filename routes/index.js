@@ -32,6 +32,8 @@ var request = require('request');
 
 const ACCESS_TOKEN = process.env.FB_ACCESS_TOKEN;
 
+console.log("token: " + ACCESS_TOKEN)
+
 function sendTextMessage(sender, text) {
   request({
     url: 'https://graph.facebook.com/v2.6/me/messages',
